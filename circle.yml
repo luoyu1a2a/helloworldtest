@@ -6,3 +6,6 @@ general:
   branches:
     ignore:
       - gh-pages
+test:
+  post:
+    HelloWorldyu.java
