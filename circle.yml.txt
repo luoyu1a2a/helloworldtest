@@ -1,2 +1,5 @@
 general:
   build_dir: api
+test:
+  override:
+    - javaunit test/unit-tests
