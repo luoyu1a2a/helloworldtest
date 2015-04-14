@@ -1,13 +1,26 @@
-<<<<<<< HEAD
-general:
-  build_dir: api
+machine:
+  java:
+    version: oraclejdk8
+  node:
+    version: 0.10.28
+checkout:
+  post:
+    - git submodule sync
+    - git submodule update --init
+dependencies:
+  override:
+    - ant resolve -Divy.useCacheOnly=false
+  cache_directories:
+    - ~/.ivycache-usrz
 test:
   override:
-    - javaunit test/unit-tests
-  
-  
-mvn dependency:resolve
-
-test:
- - java TriangleTest.java
->>>>>>> origin/master
+    - ant test -Divy.useCacheOnly=true
+deployment:
+  release:
+    branch: release
+    commands:
+      - ant publish
+          -Dtest.skip=true
+          -Divy.useCacheOnly=true
+          -Divy.buildNumber="${CIRCLE_BUILD_NUM}"
+      - bash ./build/repository.sh
