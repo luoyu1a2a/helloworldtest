@@ -1,0 +1,14 @@
+<<<<<<< HEAD
+test:
+  override:
+    - javaunit test/unit-tests
+=======
+general:
+  build_dir: src/junitexample
+  
+  
+mvn dependency:resolve
+
+test:
+ - java TriangleTest.java
+>>>>>>> origin/master
