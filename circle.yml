@@ -1,9 +1,8 @@
 machine:
   java:
-    version: oraclejdk8
-  node:
-    version: 0.10.28
-checkout:
-  post:
-    - git submodule sync
-    - git submodule update --init
+    version: oraclejdk6
+
+general:
+  branches:
+    ignore:
+      - gh-pages
