@@ -1,10 +1,9 @@
 <<<<<<< HEAD
+general:
+  build_dir: api
 test:
   override:
     - javaunit test/unit-tests
-=======
-general:
-  build_dir: src/junitexample
   
   
 mvn dependency:resolve
