@@ -7,5 +7,4 @@ general:
     ignore:
       - gh-pages
 test:
-  post:
-    HelloWorldyu.java
+  - java HelloWorldyu.java
