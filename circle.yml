@@ -7,4 +7,5 @@ general:
     ignore:
       - gh-pages
 test:
-  - java HelloWorldyu.java
+  override:
+  - java ./HelloWorldyu.java
