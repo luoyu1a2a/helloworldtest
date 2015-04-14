@@ -8,4 +8,4 @@ general:
       - gh-pages
 test:
   override:
-  - java HelloWorldyu.java
+  - java Main
